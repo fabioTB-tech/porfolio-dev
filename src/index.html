@@ -29,16 +29,16 @@
         <div id="img-inicio">
             <img src="img/icon-F.png" alt="ícone de boas-vindas">
         </div>
-        <article id="sobre">
-            <div id="txt-sobre">
-                <h1>Sobre mim</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est autem exercitationem blanditiis officiis nobis incidunt rerum consequuntur ipsam delectus reprehenderit harum sunt distinctio, esse accusantium odit. Aspernatur, pariatur quia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt modi eos velit quibusdam neque repudiandae a, recusandae hic provident quam impedit? Molestias suscipit laudantium quasi adipisci quibusdam officia quia incidunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum quasi in eveniet mollitia. Quo vero commodi tenetur? Eveniet fugit, voluptates ea ipsum delectus, ducimus deserunt ad quisquam quibusdam, dignissimos perferendis?</p>
-            </div>
-            <div id="img-sobre">
-                <img src="img/sticker.png" alt="ícone">
-            </div>
-        </article>
     </main>
+    <article id="sobre">
+        <div id="txt-sobre">
+            <h1>Sobre mim</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est autem exercitationem blanditiis officiis nobis incidunt rerum consequuntur ipsam delectus reprehenderit harum sunt distinctio, esse accusantium odit. Aspernatur, pariatur quia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt modi eos velit quibusdam neque repudiandae a, recusandae hic provident quam impedit? Molestias suscipit laudantium quasi adipisci quibusdam officia quia incidunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum quasi in eveniet mollitia. Quo vero commodi tenetur? Eveniet fugit, voluptates ea ipsum delectus, ducimus deserunt ad quisquam quibusdam, dignissimos perferendis?</p>
+        </div>
+        <div id="img-sobre">
+            <img src="img/sticker.png" alt="ícone">
+        </div>
+    </article>
     <section id="projetos">
         <h1>Meus projetos</h1>
         <div id="container-projetos">
@@ -95,18 +95,22 @@
             <div class="skills-content">
                 <div class="all-skills">
                     <img src="img/html.png" alt="HTML">
+                    <span>●</span>
                     <p>HTML5</p>
                 </div>
                 <div class="all-skills">
                     <img src="img/css-3.png" alt="CSS3">
+                    <span>●</span>
                     <p>CSS3</p>
                 </div>
                 <div class="all-skills">
                     <img src="img/js.png" alt="JavaScript">
+                    <span>●</span>
                     <p>JavaScript</p>
                 </div>
                 <div class="all-skills">
                     <img src="img/python.png" alt="Python">
+                    <span>●</span>
                     <p>Python</p>
                 </div>
             </div>
@@ -117,24 +121,34 @@
                 <span>●</span>
             </div>
             <div class="skills-content">
-                <ul class="skills-icon">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <ul class="all-skills">
-                    <li>Trabalho em equipe</li>
-                    <li>Foco</li>
-                    <li>Resolução de problemas</li>
-                    <li>Aprendizado contínuo</li>
-                </ul>
+                <div class="all-skills">
+                    <img src="img/hand-shake.png" alt="icon hand-shake">
+                    <span>●</span>
+                    <p>Trabalho em equipe</p>
+                </div>
+                <div class="all-skills">
+                    <img src="img/bullseye.png" alt="icon bullseye">
+                    <span>●</span>
+                    <p>Foco</p>
+                </div>
+                <div class="all-skills">
+                    <img src="img/idea.png" alt="icon lamp">
+                    <span>●</span>
+                    <p>Resolução de problemas</p>
+                </div>
+                <div class="all-skills">
+                    <img src="img/brain.png" alt="icon brain">
+                    <span>●</span>
+                    <p>Aprendizado contínuo </p>
+                </div>
             </div>
         </div>
     </section>
     <section id="contato">
-        <h1>Se interessou?</h1>
-        <h2>Vamos manter contato! :D</h2>
+        <div class="titulo">
+            <h1>Se interessou?</h1>
+            <h2>Vamos manter contato! :D</h2>
+        </div>
         <div id="redes-sociais">
             <h3>Minhas redes sociais:</h3>
             <a href="http://linkedin.com/in/fabio-teixeira-braga" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -143,26 +157,29 @@
             <a href="http://github.com/fabiotb-tech" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
         </div>
 
-        <div id="email">
-            <h3>Ou se preferir, me mande um Email!</h3>
+        <div id="email-area">
+            <h3>Ou se preferir, me mande um <a href="mailto:drawingfabio@gmail.com" target="_blank">Email</a>!</h3>
 
-            <form>
+            <form method="post" id="contact-form">
                 <div class="formulario">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" required placeholder="digite seu nome">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required placeholder="digite seu nome">
                 </div>
                 <div class="formulario">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" required placeholder="digite seu email">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="digite seu email">
                 </div>
                 <div class="formulario">
-                    <label for="assunto">Assunto:</label>
-                    <input type="text" id="assunto" required placeholder="sobre oque é o assunto">
+                    <label for="assunto">Assunto</label>
+                    <input type="text" id="assunto" name="assunto" required placeholder="sobre oque é o assunto">
                 </div>
                 <div class="formulario">
-                    <label for="msg">Mensagem:</label>
-                    <input type="text" id="msg" required placeholder="sua mensagem">
+                    <label for="msg">Mensagem</label>
+                    <textarea name="msg" id="msg" required placeholder="sua mensagem" rows="5"></textarea>
                 </div>
+                <button type="submit">
+                    Enviar
+                </button>
             </form>
         </div>
     </section>
