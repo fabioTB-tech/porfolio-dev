@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabio.dev</title>
+    <link rel="shortcut icon" href="img/logo F.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 992px)">
     <script src="https://kit.fontawesome.com/ee6aba183b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
     <header>
@@ -19,7 +21,9 @@
         </nav>
         <button><a href="pdf/Currículo_Fábio.pdf" download>Baixar CV</a></button>
     </header>
+    
     <main id="inicio">
+        <div id="particles-js"></div>
         <div id="txt-bem-vindo">
             <h1>Bem vindo(a) ao meu <span>Portfólio</span></h1>
         </div>
@@ -31,10 +35,23 @@
             <img src="img/icon-F.png" alt="ícone de boas-vindas">
         </div>
     </main>
+    
+    <script src="js/node_modules/particles.js/demo/js/app.js"></script>
+
     <article id="sobre">
         <div id="txt-sobre">
             <h1>Sobre mim</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est autem exercitationem blanditiis officiis nobis incidunt rerum consequuntur ipsam delectus reprehenderit harum sunt distinctio, esse accusantium odit. Aspernatur, pariatur quia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt modi eos velit quibusdam neque repudiandae a, recusandae hic provident quam impedit? Molestias suscipit laudantium quasi adipisci quibusdam officia quia incidunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum quasi in eveniet mollitia. Quo vero commodi tenetur? Eveniet fugit, voluptates ea ipsum delectus, ducimus deserunt ad quisquam quibusdam, dignissimos perferendis?</p>
+            <p>
+                Sou Fábio, desenvolvedor front-end em transição para full-stack, apaixonado por tecnologia e pelo universo da programação desde cedo. Iniciei meus estudos em fevereiro de 2025 com Python, o que me proporcionou uma base sólida em lógica de programação e resolução de problemas, competências que aplico diariamente no desenvolvimento de aplicações web.
+            </p>
+
+            <p>
+                Atualmente, possuo experiência prática com HTML, CSS e JavaScript, focando na criação de interfaces responsivas, bem estruturadas e com código limpo e organizado. Tenho como característica a proatividade e a busca constante por aprendizado, sempre procurando evoluir tecnicamente e aprimorar minhas boas práticas de desenvolvimento.
+            </p>
+
+            <p>
+                Meu objetivo é atuar profissionalmente na área de desenvolvimento web, contribuindo com soluções eficientes, interfaces de qualidade e mantendo uma evolução contínua por meio de estudos, projetos práticos e aprofundamento em tecnologias que me aproximem cada vez mais do perfil full-stack.
+            </p>
         </div>
         <div id="img-sobre">
             <img src="img/sticker.png" alt="ícone">
@@ -184,5 +201,7 @@
             </form>
         </div>
     </section>
+
+    <script src="js/index.js"></script>
 </body>
 </html>

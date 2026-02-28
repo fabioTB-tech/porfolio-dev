@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Meu portfólio de dev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabioTB-tech/porfolio-dev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabioTB-tech/porfolio-dev/issues"
+  },
+  "homepage": "https://github.com/fabioTB-tech/porfolio-dev#readme",
+  "dependencies": {
+    "particles.js": "^2.0.0"
+  }
+}

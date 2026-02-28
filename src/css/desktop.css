@@ -46,3 +46,28 @@ main#inicio div#img-inicio {
         width: 450px;
     }
 }
+
+article#sobre {
+    justify-content: space-around;
+    align-items: center;
+}
+
+article#sobre #txt-sobre {
+    width: 55%;
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+}
+
+div#img-sobre {
+    display: block;
+
+    img {
+        width: 450px;
+    }
+}
