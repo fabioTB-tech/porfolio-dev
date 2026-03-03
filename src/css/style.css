@@ -39,11 +39,12 @@
 }
 
 #particles-js {
+    position: absolute;
     width: 100%;
-    height: 90vh;
-    grid-area: 1 / 1 / -1 / -1;
+    height: 100vh;
 }
 
+html,
 body {
     background-color: var(--cor-destaque);
     color: var(--cor-fonte);
@@ -56,10 +57,10 @@ header {
     color: var(--cor-fonte-fundo-branco);
     width: 100%;
     padding: 15px;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 5;
 
     display: flex;
     justify-content: space-between;
@@ -85,30 +86,54 @@ header button {
     cursor: pointer;
 }
 
-header nav a {
+#nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link {
     color: var(--cor-fonte-fundo-branco);
     text-decoration: none;
     padding: 0 8px;
     font-size: small;
+    position: relative;
 
     transition: .3s;
 }
 
-header nav a:hover {
-    text-decoration: underline;
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-destaque);
+    transform: translateX(-50%);
+
+    transition: .3s ease;
 }
 
-main#inicio {
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+section#inicio {
     background-image: linear-gradient(to bottom, var(--cor-fundo), var(--cor-fundo), var(--cor-destaque));
     font-family: 'Scada', sans-serif;
 
     display: grid;
-    grid-template-rows: 200px 1fr 1fr;
+    grid-template-rows: 75px 200px 1fr 1fr;
     justify-content: center;
     justify-items: center;
+    z-index: 0;
 }
 
-main#inicio div#txt-bem-vindo {
+section#inicio div#txt-bem-vindo {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     font-weight: normal;
@@ -116,6 +141,7 @@ main#inicio div#txt-bem-vindo {
     height: 200px;
     width: 250px;
     align-content: center;
+    grid-row: 2 / 3;
 
     span {
         font-weight: 700;
@@ -123,19 +149,20 @@ main#inicio div#txt-bem-vindo {
     }
 }
 
-main#inicio div#img-inicio {
-    grid-row: 2 / 3;
+section#inicio div#img-inicio {
+    grid-row: 3 / 4;
 }
 
-main#inicio div#img-inicio img {
+section#inicio div#img-inicio img {
     width: 300px;
 }
 
-main#inicio div#txt-inicio {
+section#inicio div#txt-inicio {
     font-family: 'SN Pro', sans-serif;
     text-align: center;
     font-size: 1.2em;
     line-height: 1.5;
+    grid-area: -2 / 1 / -1 / -1;
 
     span {
         font-family: 'Courier New', Courier, monospace;
@@ -173,7 +200,7 @@ article#sobre {
     background-color: var(--cor-fonte2);
     padding: 40px;
     border-radius: 40px 40px 0 0;
-    box-shadow: 0 8px 5px #9c9c9c;
+    box-shadow: inset 0 -8px 10px var(--cor-fundo);
     z-index: 1;
 
     display: flex;
@@ -206,8 +233,6 @@ div#img-sobre {
 
 section {
     background-color: var(--cor-fundo);
-    box-shadow: 0 -5px 10px 5px var(--cor-fundo);
-    padding: 15px;
 }
 
 /* Área de PROJETOS */
@@ -401,7 +426,6 @@ section#contato {
     justify-content: center;
     align-items: center;
     justify-items: center;
-    
 }
 
 section#contato .titulo {
@@ -427,17 +451,27 @@ section#contato #redes-sociais {
         line-height: 2.5;
     }
 
-    a {
-        font-size: 2.5em;
-        color: var(--cor-fonte);
-        margin: 0 10px;
+    .link-social {
+        display: inline-block;
 
-        transition: .3s;
+        a {
+            font-size: 2.5em;
+            color: var(--cor-fonte);
+            margin: 0 10px;
+            text-decoration: none;
+    
+            transition: .3s;
+
+            span {
+                display: none;
+            }
+        }
+    
+        a:hover {
+            color: var(--cor-fonte2);
+        }
     }
 
-    a:hover {
-        color: var(--cor-fonte2);
-    }
 }
 
 #email-area {

@@ -9,20 +9,21 @@
     <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 992px)">
     <script src="https://kit.fontawesome.com/ee6aba183b.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <header>
         <span id="logo">F.dev</span>
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#contato">Contato</a>
-        </nav>
+        <ul id="nav-list">
+            <li><a href="#inicio" class="nav-link active">Início</a></li>
+            <li><a href="#projetos" class="nav-link">Projetos</a></li>
+            <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+            <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
         <button><a href="pdf/Currículo_Fábio.pdf" download>Baixar CV</a></button>
     </header>
     
-    <main id="inicio">
+    <section id="inicio">
         <div id="particles-js"></div>
         <div id="txt-bem-vindo">
             <h1>Bem vindo(a) ao meu <span>Portfólio</span></h1>
@@ -34,7 +35,7 @@
         <div id="img-inicio">
             <img src="img/icon-F.png" alt="ícone de boas-vindas">
         </div>
-    </main>
+    </section>
     
     <script src="js/node_modules/particles.js/demo/js/app.js"></script>
 
@@ -169,33 +170,49 @@
         </div>
         <div id="redes-sociais">
             <h3>Minhas redes sociais:</h3>
-            <a href="http://linkedin.com/in/fabio-teixeira-braga" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="http://instagram.com/fabio._.bleh" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-            <a href="http://wa.me/5562998666364" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="http://github.com/fabiotb-tech" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+            <div class="link-social">
+                <a id="linkedin" href="http://linkedin.com/in/fabio-teixeira-braga" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+                </a>
+            </div>
+            <div class="link-social">
+                <a id="instagram" href="http://instagram.com/fabio._.bleh" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i>
+                <span>Instagram</span>
+                </a>
+            </div>
+            <div class="link-social">
+                <a id="whatsapp" href="http://wa.me/5562998666364" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i>
+                <span>Whatsapp</span>
+                </a>
+            </div>
+            <div class="link-social">
+                <a id="github" href="http://github.com/fabiotb-tech" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+                </a>
+            </div>
         </div>
 
         <div id="email-area">
             <h3>Ou se preferir, me mande um <a href="mailto:drawingfabio@gmail.com" target="_blank">Email</a>!</h3>
 
             <form method="post" id="contact-form">
-                <div class="formulario">
+                <div class="formulario" id="container-nome">
                     <label for="nome">Nome</label>
                     <input type="text" id="nome" name="nome" required placeholder="digite seu nome">
                 </div>
-                <div class="formulario">
+                <div class="formulario" id="container-email">
                     <label for="email">E-mail</label>
                     <input type="email" id="email" name="email" required placeholder="digite seu email">
                 </div>
-                <div class="formulario">
+                <div class="formulario" id="container-assunto">
                     <label for="assunto">Assunto</label>
                     <input type="text" id="assunto" name="assunto" required placeholder="sobre oque é o assunto">
                 </div>
-                <div class="formulario">
+                <div class="formulario" id="container-msg">
                     <label for="msg">Mensagem</label>
                     <textarea name="msg" id="msg" required placeholder="sua mensagem" rows="5"></textarea>
                 </div>
-                <button type="submit">
+                <button type="submit" id="enviar">
                     Enviar
                 </button>
             </form>
@@ -203,5 +220,6 @@
     </section>
 
     <script src="js/index.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>

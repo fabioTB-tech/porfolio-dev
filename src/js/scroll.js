@@ -1,0 +1,5 @@
+ScrollReveal({ reset: true }).reveal('#p1', { delay: 250, duration: 1200, origin: 'left' })
+ScrollReveal({ reset: true }).reveal('#p2', { delay: 300, duration: 1200, origin: 'left' })
+ScrollReveal({ reset: true }).reveal('#p3', { delay: 350, duration: 1200, origin: 'left' })
+ScrollReveal({ reset: true }).reveal('#hard-skills', { delay: 250, duration: 1200, origin: 'bottom' })
+ScrollReveal({ reset: true }).reveal('#soft-skills', { delay: 350, duration: 1200, origin: 'bottom' })
