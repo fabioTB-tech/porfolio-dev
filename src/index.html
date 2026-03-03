@@ -7,9 +7,13 @@
     <link rel="shortcut icon" href="img/logo F.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 992px)">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://kit.fontawesome.com/ee6aba183b.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
 </head>
 <body>
     <header>
@@ -198,7 +202,7 @@
             <form method="post" id="contact-form">
                 <div class="formulario" id="container-nome">
                     <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" required placeholder="digite seu nome">
+                    <input type="text" id="nome" name="name" required placeholder="digite seu nome">
                 </div>
                 <div class="formulario" id="container-email">
                     <label for="email">E-mail</label>
@@ -206,11 +210,11 @@
                 </div>
                 <div class="formulario" id="container-assunto">
                     <label for="assunto">Assunto</label>
-                    <input type="text" id="assunto" name="assunto" required placeholder="sobre oque é o assunto">
+                    <input type="text" id="assunto" name="subject" required placeholder="sobre oque é o assunto">
                 </div>
                 <div class="formulario" id="container-msg">
                     <label for="msg">Mensagem</label>
-                    <textarea name="msg" id="msg" required placeholder="sua mensagem" rows="5"></textarea>
+                    <textarea name="message" id="msg" required placeholder="sua mensagem" rows="5"></textarea>
                 </div>
                 <button type="submit" id="enviar">
                     Enviar
@@ -219,6 +223,7 @@
         </div>
     </section>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="js/index.js"></script>
     <script src="js/scroll.js"></script>
 </body>
